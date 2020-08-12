@@ -1,0 +1,47 @@
+<idea-plugin>
+
+    <!-- 插件唯一id，不能和其他插件项目重复，所以推荐使用com.xxx.xxx的格式
+       插件不同版本之间不能更改，若没有指定，则与插件名称相同 -->
+    <id>com.ando.adb.assistant</id>
+    <!-- 插件名称，别人在官方插件库搜索你的插件时使用的名称 -->
+    <name>ADB Assistant</name>
+    <version>1.0</version>
+    <vendor email="jooybao@foxmail.com" url="https://javakam.github.io">Personal</vendor>
+
+    <!-- 插件的描述 （不能使用默认值，必须修改成自己的。并且需要大于40个字符）-->
+    <description><![CDATA[
+      ADB常用命令集工具 👉 ADB commonly used command set tools.<br>
+      <em>https://github.com/javakam</em>
+    ]]></description>
+
+    <!-- 插件版本变更信息，支持HTML标签；
+       将展示在 settings | Plugins 对话框和插件仓库的Web页面 -->
+    <change-notes><![CDATA[
+      1.First Commit <br>
+      <em>https://github.com/javakam</em>
+    ]]>
+    </change-notes>
+
+    <!-- 插件兼容IDEA build 号-->
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- 插件所依赖的其他插件的id -->
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- 声明该插件对IDEA core或其他插件的扩展 -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <!-- 编写插件动作 -->
+    <actions>
+        <!-- Add your actions here -->
+        <action id="id_adb" class="action.ADBAssistant" text="ADBAssistant" description="Program Entrance">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
